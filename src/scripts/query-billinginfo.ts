@@ -54,7 +54,7 @@ const customer: Customer = {
         trialPeriod: 2000,
         billingPeriod: 2000,
         maxBillingPeriods: 12,
-        initialBillingPeriodCharge: 100,
+        initialBillingPeriodCharge: 150,
     },
     id: "ABC123",
 };
