@@ -20,19 +20,6 @@ async function run() {
     const client = new Client({
         connection,
     });
-
-    const custArray: Customer[] = [1, 2, 3, 4, 5].map((i) => ({
-        firstName: "First Name" + i,
-        lastName: "Last Name" + i,
-        email: "email-" + i + "@customer.com",
-        subscription: {
-            trialPeriod: 3 + i * 1000, // 3 seconds
-            billingPeriod: 3 + i, // 3 seconds
-            maxBillingPeriods: 3,
-            initialBillingPeriodCharge: 120 + i * 10,
-        },
-        id: "Id-" + i,
-    }));
     const resultArr = await Promise.all(
         custArray.map(async (cust) => {
             try {
